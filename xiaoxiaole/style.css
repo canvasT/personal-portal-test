@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    margin: 20px 0;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 2px;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.tile:hover {
+    transform: scale(1.1);
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell[data-color="red"] { background-color: #ff6b6b; }
+.cell[data-color="blue"] { background-color: #4ecdc4; }
+.cell[data-color="green"] { background-color: #82c91e; }
+.cell[data-color="yellow"] { background-color: #ffe066; }
+.cell[data-color="purple"] { background-color: #cc5de8; }
